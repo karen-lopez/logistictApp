@@ -1,4 +1,4 @@
-package com.kl.logisticts;
+package com.kl.logisticts.apirest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
