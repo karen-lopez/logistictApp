@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "1ae465f2-8b0c-4c1b-925b-c2606a477553",
+		"name": "Logistics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"typeB\",\r\n    \"name\": \"Name Product\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"documentNumber\": \"12345678\",\r\n    \"name\": \"Name Client\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resumeDeliverys",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/deliverys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deliverys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seaDeliverys",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productType\":\"typeA\",\r\n    \"totalProduct\" : 9,\r\n    \"registrationDate\" : \"2022-02-20\",\r\n    \"deliveryDate\": \"2022-03-21\",\r\n    \"price\" : 4000000,\r\n    \"trackingNumber\" : \"006T\",\r\n    \"clientId\" : \"12345\",\r\n    \"fleetNumber\" : \"ABC1234D\",\r\n    \"port\": \"P001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/seaDeliverys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seaDeliverys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "roadDelivery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productType\":\"typeA\",\r\n    \"totalProduct\" : 9,\r\n    \"registrationDate\" : \"2022-03-20\",\r\n    \"deliveryDate\": \"2022-03-21\",\r\n    \"price\" : 2000000,\r\n    \"trackingNumber\" : \"001T\",\r\n    \"clientId\" : \"12345\",\r\n    \"warehouse\" : \"W002\",\r\n    \"licensePlate\" : \"ABC123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roadDeliverys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roadDeliverys"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
