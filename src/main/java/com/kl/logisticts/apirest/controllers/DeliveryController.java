@@ -3,8 +3,8 @@ package com.kl.logisticts.apirest.controllers;
 import com.kl.logisticts.apirest.entitys.delivery.Delivery;
 import com.kl.logisticts.apirest.services.delivery.IDeliveryService;
 import com.kl.logisticts.apirest.entitys.delivery.RoadDelivery;
+import com.kl.logisticts.apirest.entitys.delivery.SeaDelivery;
 import java.util.List;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +26,12 @@ public class DeliveryController {
     }
 
     @PostMapping("/roadDeliverys")
-    public Delivery save(@RequestBody RoadDelivery delivery, HttpServletResponse response) {
+    public Delivery saveRoadDelivery(@RequestBody RoadDelivery delivery) {
+        return deliveryService.save(delivery);
+    }
+    
+    @PostMapping("/seaDeliverys")
+    public Delivery saveSeaDelivery(@RequestBody SeaDelivery delivery) {
         return deliveryService.save(delivery);
     }
     

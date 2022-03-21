@@ -2,9 +2,7 @@ package com.kl.logisticts.apirest.entitys.delivery;
 
 import com.kl.logisticts.apirest.entitys.transport.ITransport;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.Date;
-import java.time.ZoneId;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
@@ -25,6 +23,8 @@ public abstract class Delivery {
     protected String clientId;
     @Transient
     protected ITransport transport;
+    
+    protected static final Integer TOTAL_PRODUCTS_FOR_DISCOUNT_GREATER_THAN = 5;
 
     public Delivery(String productType, Integer totalProduct, Date registrationDate, Date deliveryDate, BigDecimal price, String trackingNumber, String clientId) {
         this.productType = productType;
@@ -34,6 +34,7 @@ public abstract class Delivery {
         this.price = price;
         this.trackingNumber = trackingNumber;
         this.clientId = clientId;
+        this.discountPrice = this.price;
     }
     
     abstract protected ITransport createTransport();
