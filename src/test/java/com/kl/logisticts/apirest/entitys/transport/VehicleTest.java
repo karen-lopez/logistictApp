@@ -10,9 +10,10 @@ public class VehicleTest {
     public void testGetIdentificationMustReturnALicensePlate() {
       String licensePlate = "ABC123";
       Vehicle vehicle = new Vehicle(licensePlate);
+      String typeTransport = "Road";
       
-      String result = vehicle.getIdentification();
+      String result = vehicle.getTypeTransport();
       
-      Assert.assertEquals(licensePlate, result);
+      Assert.assertEquals(typeTransport, result);
     }
 }

@@ -9,9 +9,10 @@ public class FleetTest {
     public void testGetIdentification() {
         String fleetNumber = "ABC1234D";
         Fleet fleet = new Fleet(fleetNumber);
+        String typeTransport = "Sea";
 
-        String result = fleet.getIdentification();
+        String result = fleet.getTypeTransport();
 
-        Assert.assertEquals(fleetNumber, result);
+        Assert.assertEquals(typeTransport, result);
     }
 }
